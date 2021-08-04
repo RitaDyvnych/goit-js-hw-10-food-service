@@ -1,5 +1,11 @@
+import foodCards from './menu.json';
+import menuTemplate from './templates/menu.hbs';
+
 const themeSwitcher = document.querySelector("#theme-switch-toggle");
 const fullScreen = document.querySelector('body');
+const menuMarkup = document.querySelector(".js-menu");
+
+menuMarkup.innerHTML = menuTemplate(foodCards);
 
 const Theme = {
   LIGHT: 'light-theme',
